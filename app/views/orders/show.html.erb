@@ -5,9 +5,48 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h4>Thank you for your order!</h4> <strong>email:</strong> <%= @order.email%> 
   </div>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+</section>
+
+<section class="cart-show">
+
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |item| %>
+        <%# Vasily said to look into Eager loading %>
+          <%= render 'line_item', product: item.product, order_item: item %>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+           <%= humanized_money_with_symbol @order.total_cents / 100.00 %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+     <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+
+
 
 </section>
