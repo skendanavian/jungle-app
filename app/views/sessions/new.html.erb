@@ -1,0 +1,17 @@
+
+
+<div class="row d-flex justify-content-center text-center jungle-img-dark" >
+<h2>Login</h2>
+<%= form_for '/login' do %>
+<div class="form-group">
+  Email: <br> <%= text_field_tag :email %>
+  </div>
+  <div class="form-group">
+  Password: <br> <%= password_field_tag :password %>
+    </div>
+  <%= submit_tag "Submit", class: 'btn btn-info'  %>
+
+
+<% end %>
+</div>
+
