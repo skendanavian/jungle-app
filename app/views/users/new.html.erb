@@ -1,0 +1,23 @@
+
+<div class="row d-flex justify-content-center text-center jungle-img-dark" >
+<h2>Signup</h2>
+<%= form_for :user, url: '/users' do |f| %>
+  <div class="form-group">
+  First Name: <br> <%=  f.text_field :first_name %>
+  </div>
+  <div class="form-group">
+  Last Name: <br> <%= f.text_field :last_name %>
+  </div>
+  <div class="form-group">
+  Email: <br> <%= f.text_field :email %>
+   </div>
+  <div class="form-group">
+  Password: <br> <%= f.password_field :password %>
+   </div>
+  <div class="form-group">
+  Password Confirmation: <br> <%= f.password_field :password_confirmation %>
+   </div>
+  <%= f.submit "Submit", class: 'btn btn-info' %>
+
+<% end %>
+</div>
