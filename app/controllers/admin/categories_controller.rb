@@ -5,9 +5,6 @@ class Admin::CategoriesController < ApplicationController
      @category = Category.order(name: :asc).all
      
    end
-   def show
-  @category = Category.all
-   end
  
    def new
      @category = Category.new
@@ -15,7 +12,7 @@ class Admin::CategoriesController < ApplicationController
  
    def create
      @category = Category.new(category_params)
-     puts @category.all
+     puts @category.inspect
  
      if @category.save
        redirect_to [:admin, :categories], notice: 'Category created!'

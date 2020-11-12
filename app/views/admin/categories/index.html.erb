@@ -13,8 +13,8 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th colspan="2">Product</th>
-          <th>Category</th>
+          <th colspan="2">Category</th>
+        
 
         </tr>
       </thead>
@@ -22,9 +22,6 @@
       <% @category.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    
-    <%# Currently Stuck on This Line -->  Need to get it to route to edit view %>
-    <td><%= link_to 'Edit', [:edit, :admin, :category]%></td>
 
   </tr>
 <% end %>
