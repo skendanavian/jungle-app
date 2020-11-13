@@ -5,9 +5,18 @@
 
 // App
 @import "products";
+@import "about";
+@import "user_auth";
 
 body {
   padding-top: 70px;
+  background: rgba(103, 100, 100, 0.744);
+  h1 {
+    color: white;
+    small {
+      color: white;
+    }
+  }
 }
 
 // Bootstrap adjustments
