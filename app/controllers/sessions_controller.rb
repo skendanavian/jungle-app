@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
+      flash[:error] = 'An error occured while logging in!'
       redirect_to '/login'
     end
   end

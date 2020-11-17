@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to :root, notice: 'Account created successfully'
     else
-      flash[:error] = 'An error occured!'
+      flash[:error] = 'An error occured while registering!'
       render 'new'
     end
   

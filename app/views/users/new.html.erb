@@ -1,6 +1,11 @@
 
 <div class="row d-flex justify-content-center text-center jungle-img-dark" >
 <h2>Signup</h2>
+
+<% if flash[:error] %>
+  <p><%= flash[:error] %> </p>
+<%end%>
+
 <%= form_for :user, url: '/users' do |f| %>
   <div class="form-group">
   First Name: <br> <%=  f.text_field :first_name %>
