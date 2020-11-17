@@ -21,7 +21,6 @@ end
   scenario "They see all products" do
     # ACT
     visit root_path
-    puts page.html
    
     first(:button, "Add").click
     sleep(1)
