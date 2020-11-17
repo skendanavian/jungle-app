@@ -2,8 +2,10 @@
 <div class="row d-flex justify-content-center text-center jungle-img-dark" >
 <h2>Signup</h2>
 
-<% if flash[:error] %>
-  <p><%= flash[:error] %> </p>
+<%if @user%>
+<% @user.errors.full_messages.each do |error| %>
+<p><%= error%></p>
+<%end%>
 <%end%>
 
 <%= form_for :user, url: '/users' do |f| %>
