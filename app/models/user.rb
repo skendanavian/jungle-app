@@ -17,14 +17,15 @@ class User < ActiveRecord::Base
     self.email.downcase!
  end
 
- def self.authenticate_with_credentials(email, password)
-  
-  @user = User.find_by_email(email.downcase.strip)
-  if @user && @user.authenticate(password)
-    @user
-  else
-    nil  
+  def self.authenticate_with_credentials(email, password)
+    edited_email = email.downcase.strip
+    puts edited_email
+  @user = User.find_by_email(edited_email)
+   if @user && @user.authenticate(password)
+     @user
+   else
+     nil  
+   end
   end
-end
 
 end
