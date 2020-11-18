@@ -9,12 +9,13 @@
 @import "user_auth";
 
 body {
+  font-family: Lato;
   padding-top: 70px;
-  background: rgba(174, 172, 172, 0.744);
+  background: rgb(213, 213, 213);
   h1 {
-    color: black;
+    color: rgb(24, 118, 38);
     small {
-      color: black;
+      color: rgb(24, 118, 38);
     }
   }
 }
@@ -22,4 +23,22 @@ body {
 // Bootstrap adjustments
 form.button_to {
   display: inline;
+}
+
+.title-text {
+  font-family: Lato;
+  font-size: 2em;
+  color: hsl(60, 33%, 99%);
+}
+
+.navbar-fixed-top {
+  background-color: rgb(24, 118, 38);
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: hsl(60, 33%, 99%);
+
+  &:hover {
+    color: hsl(0, 0%, 88%);
+  }
 }
