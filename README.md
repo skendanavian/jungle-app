@@ -23,7 +23,7 @@ The new features and fixes implemented include:
 <p align="center">
 <img src="https://github.com/skendanavian/jungle-app/blob/master/docs/product-home-page.png?raw=true" height="400">
 </p>
-<p align='center'>Shopping Cart <br> (test credentials)</p>
+<p align='center'>Shopping Cart</p>
 <p align="center">
 <img src="https://github.com/skendanavian/jungle-app/blob/master/docs/shopping-cart.png?raw=true" height="400">
 </p>
